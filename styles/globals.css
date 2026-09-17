@@ -453,3 +453,123 @@ a {
     height: 40px;
   }
 }
+
+/* ---------- Account / auth ---------- */
+.account-label { margin-bottom: 2px !important; }
+.username-heading { margin: 0 0 14px; font-size: 1.25rem; color: #075e54; }
+.auth-tabs { display: flex; border-bottom: 1px solid #e9edef; margin: 18px 0 4px; }
+.auth-tab { flex: 1; padding: 10px; border: 0; background: transparent; color: #667781; cursor: pointer; font-weight: 600; }
+.auth-tab.active { color: #075e54; border-bottom: 2px solid #25d366; }
+.full-width-button { width: 100%; }
+.text-button { margin-top: 14px; border: 0; background: none; color: #667781; cursor: pointer; }
+.success-text { color: #128c7e !important; }
+
+/* ---------- Chat header ---------- */
+.chat-subtitle { font-size: 0.72rem; opacity: 0.85; margin-top: 1px; }
+.header-spacer { width: 60px; }
+
+/* ---------- Attachments ---------- */
+.composer { position: relative; }
+.attachment-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 8px;
+  margin-bottom: 7px;
+  background: #ffffff;
+  border: 1px solid #d1d7db;
+  border-radius: 8px;
+}
+.attachment-menu button,
+.attach-button {
+  border: 1px solid #d1d7db;
+  background: #ffffff;
+  color: #075e54;
+  border-radius: 18px;
+  padding: 8px 11px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.attachment-menu button:hover,
+.attach-button:hover { background: #f0f2f5; }
+.attach-button { flex-shrink: 0; }
+.hidden-file-input { display: none; }
+.file-limit {
+  text-align: center;
+  color: #8696a0;
+  font-size: 0.68rem;
+  margin-top: 5px;
+}
+.attachment { max-width: 100%; }
+.shared-image {
+  display: block;
+  max-width: min(320px, 100%);
+  max-height: 360px;
+  border-radius: 5px;
+  object-fit: contain;
+}
+.file-name {
+  display: block;
+  color: #075e54;
+  font-size: 0.82rem;
+  word-break: break-word;
+  margin-top: 5px;
+  text-decoration: none;
+}
+.file-name:hover { text-decoration: underline; }
+.file-meta { color: #667781; font-size: 0.7rem; margin-top: 2px; }
+.file-attachment {
+  border: 1px solid #d1d7db;
+  border-radius: 6px;
+  padding: 8px;
+  background: rgba(255,255,255,.45);
+}
+.attachment audio { max-width: 100%; height: 38px; }
+.notice {
+  position: fixed;
+  left: 50%;
+  bottom: 88px;
+  transform: translateX(-50%);
+  z-index: 20;
+  background: #111b21;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 7px;
+  font-size: 0.82rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,.18);
+}
+
+/* ---------- Camera ---------- */
+.camera-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: rgba(0,0,0,.72);
+}
+.camera-card {
+  width: min(680px, 100%);
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px;
+}
+.camera-video,
+.camera-preview {
+  display: block;
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  background: #111;
+  border-radius: 6px;
+}
+.camera-actions { display: flex; gap: 8px; margin-top: 10px; }
+.camera-actions button { flex: 1; }
+.camera-take-button { margin-top: 0; }
+@media (max-width: 600px) {
+  .attachment-menu { flex-direction: column; }
+  .attachment-menu button { width: 100%; }
+  .shared-image { max-width: 260px; }
+}
